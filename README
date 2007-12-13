@@ -4,7 +4,7 @@ A collection of plugins for the GStreamer media framework.
 
 Runtime requirements:
   cygwin-1.5.24-2
-  glib2-2.12.13-1
+  glib2-2.14.4-1
   gstreamer010-0.10.14-1
   gstreamer010-plugins-base-0.10.14-1
   liboil03-0.3.11-2
@@ -37,15 +37,15 @@ Canonical download:
 -------------------------------------------
 
 Build instructions:
-  unpack gstreamer010-plugins-ffmpeg-0.10.1-X-src.tar.bz2
+  unpack gstreamer010-plugins-ffmpeg-0.10.3-X-src.tar.bz2
     if you use setup to install this src package, it will be
 	 unpacked under /usr/src automatically
   cd /usr/src
-  cygport ./gstreamer010-plugins-ffmpeg-0.10.1-X.cygport all
+  cygport ./gstreamer010-plugins-ffmpeg-0.10.3-X.cygport all
 
 This will create:
-  /usr/src/gstreamer010-plugins-ffmpeg-0.10.1-X-src.tar.bz2
-  /usr/src/gstreamer010-plugins-ffmpeg-0.10.1-X.tar.bz2
+  /usr/src/gstreamer010-plugins-ffmpeg-0.10.3-X-src.tar.bz2
+  /usr/src/gstreamer010-plugins-ffmpeg-0.10.3-X.tar.bz2
 
 -------------------------------------------
 
@@ -55,33 +55,33 @@ Files included in the main package:
   /usr/lib/gstreamer-0.10/cyggstpostproc.dll
   /usr/lib/gstreamer-0.10/libgstffmpeg.la
   /usr/lib/gstreamer-0.10/libgstpostproc.la
-  /usr/share/doc/Cygwin/gstreamer010-plugins-ffmpeg-0.10.2.README
-  /usr/share/doc/gstreamer010-plugins-ffmpeg-0.10.2/AUTHORS
-  /usr/share/doc/gstreamer010-plugins-ffmpeg-0.10.2/COPYING
-  /usr/share/doc/gstreamer010-plugins-ffmpeg-0.10.2/ChangeLog
-  /usr/share/doc/gstreamer010-plugins-ffmpeg-0.10.2/INSTALL
-  /usr/share/doc/gstreamer010-plugins-ffmpeg-0.10.2/NEWS
-  /usr/share/doc/gstreamer010-plugins-ffmpeg-0.10.2/README
-  /usr/share/doc/gstreamer010-plugins-ffmpeg-0.10.2/TODO
+  /usr/share/doc/gstreamer010-plugins-ffmpeg-0.10.3/AUTHORS
+  /usr/share/doc/gstreamer010-plugins-ffmpeg-0.10.3/COPYING
+  /usr/share/doc/gstreamer010-plugins-ffmpeg-0.10.3/ChangeLog
+  /usr/share/doc/gstreamer010-plugins-ffmpeg-0.10.3/HACKING
+  /usr/share/doc/gstreamer010-plugins-ffmpeg-0.10.3/INSTALL
+  /usr/share/doc/gstreamer010-plugins-ffmpeg-0.10.3/NEWS
+  /usr/share/doc/gstreamer010-plugins-ffmpeg-0.10.3/README
+  /usr/share/doc/gstreamer010-plugins-ffmpeg-0.10.3/TODO
   /usr/share/gtk-doc/html/gst-ffmpeg-plugins-0.10/ch01.html
   /usr/share/gtk-doc/html/gst-ffmpeg-plugins-0.10/ch02.html
   /usr/share/gtk-doc/html/gst-ffmpeg-plugins-0.10/ch03.html
   /usr/share/gtk-doc/html/gst-ffmpeg-plugins-0.10/ffenc-h263p.html
   /usr/share/gtk-doc/html/gst-ffmpeg-plugins-0.10/ffenc-mpeg4.html
-  /usr/share/gtk-doc/html/gst-ffmpeg-plugins-0.10/gst-ffmpeg-plugins-0.10.devhelp
   /usr/share/gtk-doc/html/gst-ffmpeg-plugins-0.10/gst-ffmpeg-plugins-ffenc.html
   /usr/share/gtk-doc/html/gst-ffmpeg-plugins-0.10/gst-ffmpeg-plugins-plugin-ffmpeg.html
   /usr/share/gtk-doc/html/gst-ffmpeg-plugins-0.10/home.png
   /usr/share/gtk-doc/html/gst-ffmpeg-plugins-0.10/index.html
-  /usr/share/gtk-doc/html/gst-ffmpeg-plugins-0.10/index.sgml
   /usr/share/gtk-doc/html/gst-ffmpeg-plugins-0.10/left.png
   /usr/share/gtk-doc/html/gst-ffmpeg-plugins-0.10/right.png
-  /usr/share/gtk-doc/html/gst-ffmpeg-plugins-0.10/style.css
   /usr/share/gtk-doc/html/gst-ffmpeg-plugins-0.10/up.png
 
 ------------------
 
 Port Notes:
+
+----- version 0.10.3-1 -----
+Version bump.
 
 ----- version 0.10.2-1 -----
 Version bump.
