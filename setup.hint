@@ -1,4 +1,4 @@
 category: Gnome Audio Video
-requires: cygwin glib2 gstreamer010 gstreamer010-plugins-base liboil03 zlib
+requires: cygwin glib2 gstreamer010 gstreamer010-plugins-base libavcodec51 libavformat52 libavutil49 liboil03 zlib
 sdesc: "FFMPEG plugin for the GStreamer media framework (0.10 branch)"
 ldesc: "This is gst-plugins, a set of plug-ins for GStreamer."

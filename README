@@ -3,27 +3,29 @@ gstreamer010-plugins-ffmpeg
 A collection of plugins for the GStreamer media framework.
 
 Runtime requirements:
-  cygwin-1.5.24-2
-  glib2-2.14.4-1
-  gstreamer010-0.10.14-1
-  gstreamer010-plugins-base-0.10.14-1
+  cygwin-1.5.25-11
+  glib2-2.14.6-1
+  gstreamer010-0.10.19-1
+  gstreamer010-plugins-base-0.10.19-1
+  libavcodec51-13270-1
+  libavformat52-13270-1
+  libavutil49-13270-1
   liboil03-0.3.11-2
   zlib-1.2.3-2
 
 Build requirements:
 (besides corresponding -devel packages)
-  cygwin-1.5.24-2
   autoconf2.5-2.61-1
   automake1.9-1.9.6-2
   binutils-20060817-1
-  cygport-0.3.6-1
-  gawk-3.1.5-4
+  cygport-0.3.10-1
+  gawk-3.1.6-1
   gcc-core-3.4.4-3
   gtk-doc-1.9-1
-  libtool1.5-1.5.23a-2
+  libtool-2.2.2-2
   make-3.81-1
   pkg-config-0.21-1
-  python-2.5.1-3
+  python-2.5.2-1
   python-xml-0.8.4-2
   sed-4.1.5-2
   w32api-3.10-1
@@ -37,15 +39,15 @@ Canonical download:
 -------------------------------------------
 
 Build instructions:
-  unpack gstreamer010-plugins-ffmpeg-0.10.3-X-src.tar.bz2
+  unpack gstreamer010-plugins-ffmpeg-0.10.4-X-src.tar.bz2
     if you use setup to install this src package, it will be
 	 unpacked under /usr/src automatically
   cd /usr/src
-  cygport ./gstreamer010-plugins-ffmpeg-0.10.3-X.cygport all
+  cygport ./gstreamer010-plugins-ffmpeg-0.10.4-X.cygport all
 
 This will create:
-  /usr/src/gstreamer010-plugins-ffmpeg-0.10.3-X-src.tar.bz2
-  /usr/src/gstreamer010-plugins-ffmpeg-0.10.3-X.tar.bz2
+  /usr/src/gstreamer010-plugins-ffmpeg-0.10.4-X-src.tar.bz2
+  /usr/src/gstreamer010-plugins-ffmpeg-0.10.4-X.tar.bz2
 
 -------------------------------------------
 
@@ -55,14 +57,14 @@ Files included in the main package:
   /usr/lib/gstreamer-0.10/cyggstpostproc.dll
   /usr/lib/gstreamer-0.10/libgstffmpeg.la
   /usr/lib/gstreamer-0.10/libgstpostproc.la
-  /usr/share/doc/gstreamer010-plugins-ffmpeg-0.10.3/AUTHORS
-  /usr/share/doc/gstreamer010-plugins-ffmpeg-0.10.3/COPYING
-  /usr/share/doc/gstreamer010-plugins-ffmpeg-0.10.3/ChangeLog
-  /usr/share/doc/gstreamer010-plugins-ffmpeg-0.10.3/HACKING
-  /usr/share/doc/gstreamer010-plugins-ffmpeg-0.10.3/INSTALL
-  /usr/share/doc/gstreamer010-plugins-ffmpeg-0.10.3/NEWS
-  /usr/share/doc/gstreamer010-plugins-ffmpeg-0.10.3/README
-  /usr/share/doc/gstreamer010-plugins-ffmpeg-0.10.3/TODO
+  /usr/share/doc/gstreamer010-plugins-ffmpeg-0.10.4/AUTHORS
+  /usr/share/doc/gstreamer010-plugins-ffmpeg-0.10.4/COPYING
+  /usr/share/doc/gstreamer010-plugins-ffmpeg-0.10.4/ChangeLog
+  /usr/share/doc/gstreamer010-plugins-ffmpeg-0.10.4/HACKING
+  /usr/share/doc/gstreamer010-plugins-ffmpeg-0.10.4/INSTALL
+  /usr/share/doc/gstreamer010-plugins-ffmpeg-0.10.4/NEWS
+  /usr/share/doc/gstreamer010-plugins-ffmpeg-0.10.4/README
+  /usr/share/doc/gstreamer010-plugins-ffmpeg-0.10.4/TODO
   /usr/share/gtk-doc/html/gst-ffmpeg-plugins-0.10/ch01.html
   /usr/share/gtk-doc/html/gst-ffmpeg-plugins-0.10/ch02.html
   /usr/share/gtk-doc/html/gst-ffmpeg-plugins-0.10/ch03.html
@@ -79,6 +81,9 @@ Files included in the main package:
 ------------------
 
 Port Notes:
+
+----- version 0.10.4-1 -----
+Version bump, built against external ffmpeg.
 
 ----- version 0.10.3-1 -----
 Version bump.
