@@ -3,14 +3,11 @@ gstreamer010-plugins-ffmpeg
 A collection of plugins for the GStreamer media framework.
 
 Runtime requirements:
-  cygwin-1.5.25-11
-  glib2-2.14.6-1
-  gstreamer010-0.10.19-1
-  gstreamer010-plugins-base-0.10.19-1
-  libavcodec51-13270-1
-  libavformat52-13270-1
-  libavutil49-13270-1
-  liboil03-0.3.11-2
+  cygwin-1.5.25-15
+  glib2-2.16.3-1
+  gstreamer010-0.10.20-1
+  gstreamer010-plugins-base-0.10.20-1
+  liboil03-0.3.15-1
   zlib-1.2.3-2
 
 Build requirements:
@@ -18,13 +15,13 @@ Build requirements:
   autoconf2.5-2.61-1
   automake1.9-1.9.6-2
   binutils-20060817-1
-  cygport-0.3.10-1
+  cygport-0.3.12-1
   gawk-3.1.6-1
   gcc-core-3.4.4-3
-  gtk-doc-1.9-1
+  gtk-doc-1.10-1
   libtool-2.2.2-2
   make-3.81-1
-  pkg-config-0.21-1
+  pkg-config-0.23a-2
   python-2.5.2-1
   python-xml-0.8.4-2
   sed-4.1.5-2
@@ -81,6 +78,9 @@ Files included in the main package:
 ------------------
 
 Port Notes:
+
+----- version 0.10.4-2 -----
+Rebuilt with internal ffmpeg.
 
 ----- version 0.10.4-1 -----
 Version bump, built against external ffmpeg.
