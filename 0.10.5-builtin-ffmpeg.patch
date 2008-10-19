@@ -1,0 +1,49 @@
+--- origsrc/gst-ffmpeg-0.10.5/autogen.sh	2008-05-12 10:03:23.000000000 -0500
++++ src/gst-ffmpeg-0.10.5/autogen.sh	2008-09-04 12:29:36.099463500 -0500
+@@ -97,7 +97,7 @@
+ 
+ toplevel_check $srcfile
+ 
+-tool_run "$aclocal" "-I m4 -I common/m4 $ACLOCAL_FLAGS"
++tool_run "$aclocal" "-I common/m4 $ACLOCAL_FLAGS"
+ tool_run "$libtoolize" "--copy --force"
+ tool_run "$autoheader"
+ 
+--- origsrc/gst-ffmpeg-0.10.5/configure.ac	2008-09-03 09:20:33.000000000 -0500
++++ src/gst-ffmpeg-0.10.5/configure.ac	2008-09-04 12:30:27.661633500 -0500
+@@ -264,9 +264,9 @@
+                  -Wno-deprecated-declarations"
+ 
+   dnl libgstffmpeg.la: libs to statically link to        
+-  FFMPEG_LIBS="\$(top_builddir)/gst-libs/ext/ffmpeg/libavformat/libavformat.a \
+-               \$(top_builddir)/gst-libs/ext/ffmpeg/libavcodec/libavcodec.a \
+-               \$(top_builddir)/gst-libs/ext/ffmpeg/libavutil/libavutil.a"
++  FFMPEG_LIBS="-Wl,\$(top_builddir)/gst-libs/ext/ffmpeg/libavformat/libavformat.a \
++               -Wl,\$(top_builddir)/gst-libs/ext/ffmpeg/libavcodec/libavcodec.a \
++               -Wl,\$(top_builddir)/gst-libs/ext/ffmpeg/libavutil/libavutil.a,-lz,-lbz2"
+   dnl
+   POSTPROC_CFLAGS="-I \$(top_srcdir)/gst-libs/ext/ffmpeg/libpostproc	\
+                    -I \$(top_srcdir)/gst-libs/ext/ffmpeg/libavutil 	\
+@@ -275,8 +275,8 @@
+                    -Wno-deprecated-declarations"
+ 
+   dnl libgstpostproc.la: libs to statically link to
+-  POSTPROC_LIBS="\$(top_builddir)/gst-libs/ext/ffmpeg/libpostproc/libpostproc.a \
+-  		 \$(top_builddir)/gst-libs/ext/ffmpeg/libavutil/libavutil.a"
++  POSTPROC_LIBS="-Wl,\$(top_builddir)/gst-libs/ext/ffmpeg/libpostproc/libpostproc.a \
++  		 -Wl,\$(top_builddir)/gst-libs/ext/ffmpeg/libavutil/libavutil.a"
+   				 
+   FFMPEG_SUBDIRS=gst-libs
+   AC_DEFINE(HAVE_AVI_H)
+--- origsrc/gst-ffmpeg-0.10.5/ext/ffmpeg/Makefile.am	2008-08-19 04:36:10.000000000 -0500
++++ src/gst-ffmpeg-0.10.5/ext/ffmpeg/Makefile.am	2008-09-04 12:30:44.552150400 -0500
+@@ -18,9 +18,6 @@
+ libgstffmpeg_la_LIBADD = $(FFMPEG_LIBS) $(GST_BASE_LIBS) $(LIBM) -lz -lbz2
+ libgstffmpeg_la_LDFLAGS = $(GST_PLUGIN_LDFLAGS) $(DARWIN_LDFLAGS)
+ 
+-if HAVE_FFMPEG_UNINSTALLED
+-libgstffmpeg_la_DEPENDENCIES = $(FFMPEG_LIBS)
+-endif
+ 
+ 
+ noinst_HEADERS = \

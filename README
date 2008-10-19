@@ -4,28 +4,28 @@ A collection of plugins for the GStreamer media framework.
 
 Runtime requirements:
   cygwin-1.5.25-15
-  glib2-2.16.3-1
-  gstreamer010-0.10.20-1
-  gstreamer010-plugins-base-0.10.20-1
+  glib2-2.16.6-1
+  gstreamer010-0.10.21-1
+  gstreamer010-plugins-base-0.10.21-1
+  libbz2_1-1.0.5-2
   liboil03-0.3.15-1
   zlib-1.2.3-2
 
 Build requirements:
 (besides corresponding -devel packages)
-  autoconf2.5-2.61-1
-  automake1.9-1.9.6-2
-  binutils-20060817-1
-  cygport-0.3.12-1
+  autoconf2.5-2.63-1
+  automake1.10-1.10.1-1
+  binutils-20080624-2
+  cygport-0.4.1-1
   gawk-3.1.6-1
   gcc-core-3.4.4-3
   gtk-doc-1.10-1
-  libtool-2.2.2-2
+  libtool-2.2.6a-1
   make-3.81-1
   pkg-config-0.23a-2
-  python-2.5.2-1
+  python-2.5.2-3
   python-xml-0.8.4-2
   sed-4.1.5-2
-  w32api-3.10-1
 
 Canonical website:
   http://gstreamer.freedesktop.org/
@@ -57,27 +57,17 @@ Files included in the main package:
   /usr/share/doc/gstreamer010-plugins-ffmpeg-0.10.4/AUTHORS
   /usr/share/doc/gstreamer010-plugins-ffmpeg-0.10.4/COPYING
   /usr/share/doc/gstreamer010-plugins-ffmpeg-0.10.4/ChangeLog
-  /usr/share/doc/gstreamer010-plugins-ffmpeg-0.10.4/HACKING
   /usr/share/doc/gstreamer010-plugins-ffmpeg-0.10.4/INSTALL
   /usr/share/doc/gstreamer010-plugins-ffmpeg-0.10.4/NEWS
   /usr/share/doc/gstreamer010-plugins-ffmpeg-0.10.4/README
   /usr/share/doc/gstreamer010-plugins-ffmpeg-0.10.4/TODO
-  /usr/share/gtk-doc/html/gst-ffmpeg-plugins-0.10/ch01.html
-  /usr/share/gtk-doc/html/gst-ffmpeg-plugins-0.10/ch02.html
-  /usr/share/gtk-doc/html/gst-ffmpeg-plugins-0.10/ch03.html
-  /usr/share/gtk-doc/html/gst-ffmpeg-plugins-0.10/ffenc-h263p.html
-  /usr/share/gtk-doc/html/gst-ffmpeg-plugins-0.10/ffenc-mpeg4.html
-  /usr/share/gtk-doc/html/gst-ffmpeg-plugins-0.10/gst-ffmpeg-plugins-ffenc.html
-  /usr/share/gtk-doc/html/gst-ffmpeg-plugins-0.10/gst-ffmpeg-plugins-plugin-ffmpeg.html
-  /usr/share/gtk-doc/html/gst-ffmpeg-plugins-0.10/home.png
-  /usr/share/gtk-doc/html/gst-ffmpeg-plugins-0.10/index.html
-  /usr/share/gtk-doc/html/gst-ffmpeg-plugins-0.10/left.png
-  /usr/share/gtk-doc/html/gst-ffmpeg-plugins-0.10/right.png
-  /usr/share/gtk-doc/html/gst-ffmpeg-plugins-0.10/up.png
 
 ------------------
 
 Port Notes:
+
+----- version 0.10.5-1 -----
+Version bump.
 
 ----- version 0.10.4-2 -----
 Rebuilt with internal ffmpeg.
