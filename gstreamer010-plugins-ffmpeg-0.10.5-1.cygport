@@ -1,3 +1,0 @@
-inherit gst-plugins
-
-PATCH_URI="0.10.5-builtin-ffmpeg.patch"

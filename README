@@ -1,29 +1,29 @@
-gstreamer010-plugins-ffmpeg
+gstreamer0.10-plugins-ffmpeg
 ------------------------------------------
 A collection of plugins for the GStreamer media framework.
 
 Runtime requirements:
   cygwin-1.5.25-15
-  glib2-2.16.6-1
-  gstreamer010-0.10.21-1
-  gstreamer010-plugins-base-0.10.21-1
   libbz2_1-1.0.5-2
-  liboil03-0.3.15-1
+  libglib2.0_0-2.18.4-1
+  libgstreamer0.10_0-0.10.22-1
+  libgstvideo0.10_0-0.10.22-1
+  liboil0.3_0-0.3.15-2
   zlib-1.2.3-2
 
 Build requirements:
 (besides corresponding -devel packages)
   autoconf2.5-2.63-1
-  automake1.10-1.10.1-1
+  automake1.10-1.10.1-2
   binutils-20080624-2
-  cygport-0.4.1-1
+  cygport-0.4.3-1
   gawk-3.1.6-1
   gcc-core-3.4.4-3
-  gtk-doc-1.10-1
+  gtk-doc-1.11-1
   libtool-2.2.6a-1
   make-3.81-1
   pkg-config-0.23a-2
-  python-2.5.2-3
+  python-2.5.4-1
   python-xml-0.8.4-2
   sed-4.1.5-2
 
@@ -36,35 +36,40 @@ Canonical download:
 -------------------------------------------
 
 Build instructions:
-  unpack gstreamer010-plugins-ffmpeg-0.10.4-X-src.tar.bz2
+  unpack gstreamer0.10-plugins-ffmpeg-0.10.6-X-src.tar.bz2
     if you use setup to install this src package, it will be
 	 unpacked under /usr/src automatically
   cd /usr/src
-  cygport ./gstreamer010-plugins-ffmpeg-0.10.4-X.cygport all
+  cygport ./gstreamer0.10-plugins-ffmpeg-0.10.6-X.cygport all
 
 This will create:
-  /usr/src/gstreamer010-plugins-ffmpeg-0.10.4-X-src.tar.bz2
-  /usr/src/gstreamer010-plugins-ffmpeg-0.10.4-X.tar.bz2
+  /usr/src/gstreamer0.10-plugins-ffmpeg-0.10.6-X-src.tar.bz2
+  /usr/src/gstreamer0.10-plugins-ffmpeg-0.10.6-X.tar.bz2
 
 -------------------------------------------
 
 Files included in the main package:
 
   /usr/lib/gstreamer-0.10/cyggstffmpeg.dll
+  /usr/lib/gstreamer-0.10/cyggstffmpegscale.dll
   /usr/lib/gstreamer-0.10/cyggstpostproc.dll
   /usr/lib/gstreamer-0.10/libgstffmpeg.la
+  /usr/lib/gstreamer-0.10/libgstffmpegscale.la
   /usr/lib/gstreamer-0.10/libgstpostproc.la
-  /usr/share/doc/gstreamer010-plugins-ffmpeg-0.10.4/AUTHORS
-  /usr/share/doc/gstreamer010-plugins-ffmpeg-0.10.4/COPYING
-  /usr/share/doc/gstreamer010-plugins-ffmpeg-0.10.4/ChangeLog
-  /usr/share/doc/gstreamer010-plugins-ffmpeg-0.10.4/INSTALL
-  /usr/share/doc/gstreamer010-plugins-ffmpeg-0.10.4/NEWS
-  /usr/share/doc/gstreamer010-plugins-ffmpeg-0.10.4/README
-  /usr/share/doc/gstreamer010-plugins-ffmpeg-0.10.4/TODO
+  /usr/share/doc/gstreamer0.10-plugins-ffmpeg-0.10.6/AUTHORS
+  /usr/share/doc/gstreamer0.10-plugins-ffmpeg-0.10.6/COPYING
+  /usr/share/doc/gstreamer0.10-plugins-ffmpeg-0.10.6/ChangeLog
+  /usr/share/doc/gstreamer0.10-plugins-ffmpeg-0.10.6/INSTALL
+  /usr/share/doc/gstreamer0.10-plugins-ffmpeg-0.10.6/NEWS
+  /usr/share/doc/gstreamer0.10-plugins-ffmpeg-0.10.6/README
+  /usr/share/doc/gstreamer0.10-plugins-ffmpeg-0.10.6/TODO
 
 ------------------
 
 Port Notes:
+
+----- version 0.10.6-1 -----
+Version bump.
 
 ----- version 0.10.5-1 -----
 Version bump.
