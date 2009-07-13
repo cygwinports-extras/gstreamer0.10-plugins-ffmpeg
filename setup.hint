@@ -1,4 +1,4 @@
-category: Gnome Audio Video
+category: Audio Video
 requires: libbz2_1 libgcc1 libglib2.0_0 libgstreamer0.10_0 libgstvideo0.10_0 liboil0.3_0 zlib0
 sdesc: "FFMPEG plugin for the GStreamer media framework (0.10 branch)"
 ldesc: "This is gst-plugins, a set of plug-ins for GStreamer."
