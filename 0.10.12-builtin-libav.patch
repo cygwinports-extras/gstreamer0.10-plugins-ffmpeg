@@ -1,0 +1,61 @@
+--- origsrc/gst-ffmpeg-0.10.12/configure.ac	2011-07-20 05:09:50.000000000 -0500
++++ src/gst-ffmpeg-0.10.12/configure.ac	2011-08-11 01:05:24.324227400 -0500
+@@ -266,9 +266,10 @@ else
+                  -Wno-deprecated-declarations"
+ 
+   dnl libgstffmpeg.la: libs to statically link to        
+-  FFMPEG_LIBS="\$(top_builddir)/gst-libs/ext/libav/libavformat/libavformat.a \
+-               \$(top_builddir)/gst-libs/ext/libav/libavcodec/libavcodec.a \
+-               \$(top_builddir)/gst-libs/ext/libav/libavutil/libavutil.a"
++  FFMPEG_LIBS="-Wl,\$(top_builddir)/gst-libs/ext/libav/libavformat/libavformat.a \
++               -Wl,\$(top_builddir)/gst-libs/ext/libav/libavcodec/libavcodec.a \
++               -Wl,\$(top_builddir)/gst-libs/ext/libav/libavutil/libavutil.a \
++               -Wl,-lbz2,-lz"
+   dnl
+   POSTPROC_CFLAGS="-I \$(top_srcdir)/gst-libs/ext/libav/libpostproc	\
+                    -I \$(top_srcdir)/gst-libs/ext/libav/libavutil 	\
+@@ -278,8 +279,8 @@ else
+                    -Wno-deprecated-declarations"
+ 
+   dnl libgstpostproc.la: libs to statically link to
+-  POSTPROC_LIBS="\$(top_builddir)/gst-libs/ext/libav/libpostproc/libpostproc.a \
+-  		 \$(top_builddir)/gst-libs/ext/libav/libavutil/libavutil.a"
++  POSTPROC_LIBS="-Wl,\$(top_builddir)/gst-libs/ext/libav/libpostproc/libpostproc.a \
++  		 -Wl,\$(top_builddir)/gst-libs/ext/libav/libavutil/libavutil.a"
+   				 
+   dnl
+   SWSCALE_CFLAGS="-I \$(top_srcdir)/gst-libs/ext/libav/libswscale	\
+@@ -289,8 +290,8 @@ else
+                   -Wno-deprecated-declarations"
+ 
+   dnl libgstswscale.la: libs to statically link to
+-  SWSCALE_LIBS="\$(top_builddir)/gst-libs/ext/libav/libswscale/libswscale.a \
+-                \$(top_builddir)/gst-libs/ext/libav/libavutil/libavutil.a"
++  SWSCALE_LIBS="-Wl,\$(top_builddir)/gst-libs/ext/libav/libswscale/libswscale.a \
++                -Wl,\$(top_builddir)/gst-libs/ext/libav/libavutil/libavutil.a"
+ 
+   FFMPEG_SUBDIRS=gst-libs
+   AC_DEFINE(HAVE_AVI_H)
+--- origsrc/gst-ffmpeg-0.10.12/ext/ffmpeg/Makefile.am	2011-07-12 09:35:27.000000000 -0500
++++ src/gst-ffmpeg-0.10.12/ext/ffmpeg/Makefile.am	2011-08-11 01:05:52.704850700 -0500
+@@ -25,10 +25,6 @@ libgstffmpeg_la_LIBADD = $(FFMPEG_LIBS)
+ libgstffmpeg_la_LDFLAGS = $(GST_PLUGIN_LDFLAGS) $(DARWIN_LDFLAGS)
+ libgstffmpeg_la_LIBTOOLFLAGS = --tag=disable-static
+ 
+-if HAVE_FFMPEG_UNINSTALLED
+-libgstffmpeg_la_DEPENDENCIES = $(FFMPEG_LIBS)
+-endif
+-
+ 
+ noinst_HEADERS = \
+ 	gstffmpeg.h \
+--- origsrc/gst-ffmpeg-0.10.12/ext/libswscale/Makefile.am	2011-05-17 03:53:16.000000000 -0500
++++ src/gst-ffmpeg-0.10.12/ext/libswscale/Makefile.am	2011-08-11 01:06:08.752768600 -0500
+@@ -9,7 +9,3 @@ libgstffmpegscale_la_LIBADD = $(SWSCALE_
+ 	$(GST_BASE_LIBS) $(ORC_LIBS) $(LIBM) -lz
+ libgstffmpegscale_la_LDFLAGS = $(GST_PLUGIN_LDFLAGS) $(DARWIN_LDFLAGS)
+ libgstffmpegscale_la_LIBTOOLFLAGS = --tag=disable-static
+-
+-if HAVE_FFMPEG_UNINSTALLED
+-libgstffmpegscale_la_DEPENDENCIES = $(SWSCALE_LIBS)
+-endif
