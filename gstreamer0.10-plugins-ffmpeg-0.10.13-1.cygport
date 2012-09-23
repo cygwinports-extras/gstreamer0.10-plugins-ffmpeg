@@ -1,4 +1,0 @@
-inherit gst-plugins
-
-PATCH_URI="0.10.12-builtin-libav.patch
-           0.10.12-vpath.patch"
